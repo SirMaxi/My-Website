@@ -1,0 +1,277 @@
+* {
+  box-sizing: border-box; /*Para que ocupe tanto el espaciado interno como el externo un solo espaciado*/
+  margin: 0; /*Para que no hayan margenes hacia afuera*/
+  padding: 0; /*Para que no hayan espaciados hacia adentro*/
+}
+
+body {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%23000000' fill-opacity='0.4'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+  font-size: 16px;
+  font-family: 'Oswald', sans-serif;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+/*NAVEGATION*/
+.nav-main{
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 20px 0;
+    background: #262626;
+}
+
+.nav-main a {
+    color: #ffffff;
+}
+
+.nav-brand {
+    width: 60px;
+}
+
+/*LEFT NAVEGATION*/
+.nav-main ul {
+    display: flex;
+}
+
+.nav-main ul li{
+    padding: 10px;
+}
+
+.nav-main ul li a:hover {
+    border-bottom: 2px solid #8B4513;
+}
+
+.linea {
+    border: 6px solid #8B4513;
+    margin-bottom: 15px;
+    margin-top: 0;
+    padding: 0;
+}
+
+/*HOME*/
+
+.home{
+    width: 100%;
+    height: 600px;
+    background-image: url("img/coding3.jpg"); /*No se como dejar una sola imagen centrada*/
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    color: #ffffff;
+    padding: 50px;
+}
+
+.home a {
+    color: #ffffff;
+}
+
+
+.btn { 
+    margin-top: 100px;
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #262626;
+    color: #ffffff;
+    font-size: 15px;
+    border: 1px solid #fff;
+}
+
+.home .btn{
+    
+    align-items: flex-start;
+}
+
+/*PROYECTOS*/
+
+.titulo-proyecto {
+    text-align: center;
+    margin: 100;
+    margin-top: 5px;
+    border-bottom: 3px solid #8B4513;
+    background: #262626;
+    color: #ffffff;
+}
+
+.proyectos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+    margin: 10px 0;
+}
+
+.proyectos img { /*NO SE COMO DEJAR EL ANCHO DE LA IMAGEN = AL PADDING*/
+    width: 100%;
+    height: 180px;
+}
+
+.proyectos a {
+    display: flex;
+    justify-content: start;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 2px 2px;
+    border: 1px solid #262626;
+    margin-bottom: 2px;
+    border-radius: 10px;
+    width: 8.5em;
+    background: #262626;
+    color: #ffffff;
+}
+
+.proyectos .cuadro-proyecto{
+    padding: 8px;
+    border: 2px solid #262626;
+    background: #f5f5f5;
+}
+
+.proyectos .cuadro-proyecto .skills li {
+    border: 1px solid #000000;
+    width: 140px;
+    padding-left: 5px;
+}
+
+/*ABOUT*/
+
+.titulo-about {
+    text-align: center;
+    margin: 100;
+    margin-top: 5px;
+    border-bottom: 3px solid #8B4513;
+    background: #262626;
+    color: #ffffff;
+}
+
+.p-about {
+    padding: 10%;
+    font: bold;
+    font-size: 2em;
+}
+
+.btn-cv {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #262626;
+    border: 2px solid #8B4513;
+    color: #ffffff;
+    font-size: 15px;
+    width: 250px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.about .btn-cv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*SOCIAL*/
+
+.social {
+    margin: 50px;
+}
+
+.social p {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.links a {
+    margin: 0 30px;
+}
+
+.links a i {
+    font-size: 4rem;
+}
+
+/*FOOTER*/
+
+.footer {
+    background: #262626;
+    color: #FFFAFA;
+    font-size: 20px;
+    padding: 10px 0;
+    display: grid;
+    border-top: 6px solid #8B4513;
+    text-align: center;
+}
+
+/*RESPONSIVE*/
+
+@media (max-width: 700px){
+
+    .home {
+        margin-bottom: 10px;
+    }
+    .proyectos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .titulo-proyecto {
+        text-align: left;
+        margin: 0;
+        padding: 5px 5px;
+        text-align: center;
+    }
+
+    .titulo-about {
+        text-align: left;
+        margin: 0;
+        padding: 5px 5px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+
+}
+
+@media (max-width: 500px){
+    .proyectos{
+        grid-template-columns: 1fr;
+    }
+
+    .nav-menu{
+        font-size: large;
+    }
+
+    .p-about {
+        font-size: medium;
+    }
+}
+
+
+
+
+
+
+
+
+
